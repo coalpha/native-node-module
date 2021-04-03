@@ -1,0 +1,2 @@
+lib.d.ts linguist-vendored=false
+binding.gyp linguist-language=JSON

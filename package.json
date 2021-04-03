@@ -6,6 +6,6 @@
    "types": "lib.d.ts",
    "gypfile": true,
    "devDependencies": {
-      "node-gyp": "^7.1.2"
+      "node-gyp": "^8.0.0"
    }
 }
