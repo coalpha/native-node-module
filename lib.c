@@ -2,12 +2,18 @@
 #include <string.h>
 #include <node_api.h>
 
-#define test_string "you suffer."
+#define test_string "Hello, World!"
 
 napi_value init_all(napi_env const env, napi_value exports) {
-   napi_status const res = napi_create_string_utf8(env, test_string, sizeof(test_string), &exports);
+   napi_status const res = napi_create_string_utf8(
+      env,
+      test_string,
+      sizeof(test_string),
+      &exports
+   );
+
    if (res != napi_ok) {
-      napi_throw_error(env, "EINVAL", "but why?");
+      napi_throw_error(env, NULL, "Could not create string!");
       return NULL;
    }
 

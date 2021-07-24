@@ -1,3 +1,5 @@
+# This section is for clangd only.
+# Keep it around if you are using clangd on multiple platforms.
 ifeq ($(OS), Windows_NT)
 	gyp_cache := $(subst \,/,${HOME})/AppData/Local/node-gyp/Cache
 else
@@ -11,12 +13,17 @@ compile_flags.txt:
 	$(file >>$@,-Wall)
 	$(file >>$@,-Wextra)
 	$(file >>$@,-I$(node_include))
+	@echo made $@
 
+# Here is where the actual building happens.
 src := lib.c
 bin := $(shell node -e "console.log(require('./package.json').main)")
 
 $(bin): $(src)
 	npx node-gyp rebuild
+
+build: $(bin)
+	-
 
 print: $(bin)
 	node -e "console.log(require('./$<'))"

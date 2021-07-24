@@ -1,6 +1,6 @@
 {
    "targets": [{
-      "target_name": "lib",
+      "target_name": "module",
 
       "sources": ["lib.c"],
 

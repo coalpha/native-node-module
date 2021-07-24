@@ -2,7 +2,7 @@
    "name": "@coalpha/native-node-module",
    "version": "0.0.0",
    "author": "coalpha",
-   "main": "build/Release/lib.node",
+   "main": "build/Release/module.node",
    "types": "lib.d.ts",
    "gypfile": true,
    "devDependencies": {
