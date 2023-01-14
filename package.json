@@ -1,11 +1,11 @@
 {
-   "name": "@coalpha/native-node-module",
+   "name": "module",
    "version": "0.0.0",
    "author": "coalpha",
    "main": "build/Release/module.node",
-   "types": "lib.d.ts",
+   "types": "mod.d.ts",
    "gypfile": true,
    "devDependencies": {
-      "node-gyp": "^8.0.0"
+      "node-gyp": "^9.3.1"
    }
 }

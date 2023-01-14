@@ -1,14 +1,12 @@
 {
    "targets": [{
       "target_name": "module",
-
-      "sources": ["lib.c"],
-
-      # I'm pretty sure this does nothing but whatever
+      "sources": ["mod.c"],
       "conditions":[
-         [ "OS=='win'"
-         , {"cflags_cc": ["/O2", "/Ot", "/EHc", "/Wall", "/utf-8"]}
-         , {"cflags": ["-O2", "-Werror", "-Wextra", "-pedantic"]}
+         [
+            "OS=='win'",
+            {"cflags_cc": ["/O2", "/Ot", "/EHc", "/Wall", "/utf-8"]},
+            {"cflags": ["-O2", "-Werror", "-Wextra", "-pedantic"]},
          ]
       ]
    }]

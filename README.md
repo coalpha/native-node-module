@@ -2,12 +2,10 @@
 
 <img src="misc/icon.png" width="100px"/>
 
-*From simple roots a module will grow.*
+*From simple roots, a module will grow.*
 
 There's a lot of information about creating native node modules in C++ but few
 resources on creating native node modules in C. Well, this template is for that.
-
-See an example: [@coalpha/ps-list](https://github.com/coalpha/ps-list)
 
 ## requirements
 

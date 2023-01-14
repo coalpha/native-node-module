@@ -16,7 +16,7 @@ compile_flags.txt:
 	@echo made $@
 
 # Here is where the actual building happens.
-src := lib.c
+src := mod.c
 bin := $(shell node -e "console.log(require('./package.json').main)")
 
 $(bin): $(src)
@@ -26,7 +26,7 @@ build: $(bin)
 	-
 
 print: $(bin)
-	node -e "console.log(require('./$<'))"
+	node example.js
 
 clean:
 	npx node-gyp clean
